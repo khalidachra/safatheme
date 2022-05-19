@@ -1,0 +1,170 @@
+.about__heading {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 500px;
+  margin-bottom: 100px;
+
+  h2 {
+    padding: 20px 0;
+  }
+
+  p {
+    font-weight: 400;
+    color: $dark-color;
+    margin-top: 30px;
+  }
+  i {
+    font-size: 40px;
+    color: $yellow;
+  }
+}
+
+.about__section {
+  //For Tablet/Mobile/Deskrop
+  @include tablet {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("/Images/about-bg.png");
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    left: 0;
+  }
+
+  //For Desktop
+  @include desktop {
+    display: block;
+    justify-content: center;
+    text-align: center;
+  }
+  .image {
+    img {
+      width: 100%;
+      //For Tablet/Mobile/Desktop
+
+      @include desktop {
+        width: 50%;
+      }
+      @include tablet {
+        width: 50%;
+      }
+      @include mobile {
+        width: 80%;
+      }
+    }
+  }
+  .wrapper {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(1rem, 1fr));
+    //For Tablet
+    @include tablet {
+      margin-top: 30px;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin: 0 auto;
+      max-width: 500px;
+      gap: 3rem;
+      margin: 20px 0;
+      //For Desktop/Tablet
+      @include desktop {
+        max-width: 1000px;
+      }
+      @include tablet {
+        display: block;
+        justify-content: center;
+        text-align: center;
+        max-width: 400px;
+        margin: 0 auto;
+        gap: 1rem;
+        padding: 30px 0;
+      }
+
+      .icon {
+        background: $gradient;
+        padding: 22px 22px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+        @include tablet {
+          max-width: 150px;
+          margin: 0 auto;
+        }
+      }
+      .title {
+        font-size: 25px;
+        font-weight: 600;
+        @include tablet {
+          margin-top: 30px;
+        }
+      }
+    }
+    .titles {
+      h2 {
+        font-size: 40px;
+        margin: 0 auto;
+        width: 600px;
+        margin-bottom: 20px;
+        //For Tablet
+        @include tablet {
+          width: 300px;
+          margin-bottom: 30px;
+        }
+        //For mobile
+        @include mobile {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+//Partners
+.partners {
+  margin-top: 100px;
+  &__heading {
+    .title {
+      font-size: $larg;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: $dark-color;
+      opacity: 0.8;
+    }
+  }
+  &__grid {
+    display: flex;
+    justify-content: center;
+    @include tablet {
+      display: block;
+    }
+  }
+  &__item {
+    text-align: center;
+    padding: 0 80px;
+    @include tablet {
+      padding: 20px 0;
+    }
+  }
+  &__icon {
+    font-size: 60px;
+    color: $dark-color;
+    opacity: 0.8;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+      color: $yellow;
+    }
+  }
+}

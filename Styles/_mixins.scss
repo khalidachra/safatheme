@@ -1,0 +1,22 @@
+@mixin mobile {
+  @media screen and (max-width: 710px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: 990px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (max-width: 1265px) {
+    @content;
+  }
+}
+@mixin transition(
+  $property: all,
+  $duration: 0.45s,
+  $ease: cubic-bezier(0.65, 0, 0.076, 1)
+) {
+  transition: $property $duration $ease;
+}

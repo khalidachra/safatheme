@@ -1,0 +1,203 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  //For Mobile & Tablet
+
+  &.open {
+    .header__toggle {
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+      > span:nth-child(2) {
+        opacity: 0;
+      }
+      > span:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  //Overlay Background
+  .overlay {
+    opacity: 0;
+    position: fixed;
+    top: 10%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient($dark-color, transparent);
+  }
+  ////Navbar
+  &__navbar {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    //Padding For Tablet/Mobile/desktop
+    @include tablet {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include mobile {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include desktop {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  &__logo {
+    img {
+      width: 100px;
+    }
+  }
+  &__menu {
+    background-color: $light-color;
+    padding: 26px 0;
+    position: absolute;
+    border-radius: 4px;
+    width: calc(100% - 48px);
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15px;
+
+    a {
+      color: $dark-color;
+      padding: 10px;
+      display: block;
+      text-align: center;
+    }
+  }
+  &__nav-links {
+    display: flex;
+    align-items: center;
+    li a {
+      margin-right: 40px;
+      text-transform: capitalize;
+      color: $light-purple;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      font-weight: 500;
+      &:hover {
+        color: $dark-color;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      &::before,
+      &::after {
+        box-sizing: border-box;
+      }
+    }
+
+    button {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      border: 0;
+      vertical-align: middle;
+      text-decoration: none;
+      background: transparent;
+      padding: 0;
+      font-size: inherit;
+      font-family: inherit;
+      &.learn-more {
+        width: 12rem;
+        height: auto;
+        .circle {
+          @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+          position: relative;
+          display: block;
+          margin: 0;
+          width: 3rem;
+          height: 3rem;
+          background: $gradient;
+          border-radius: 1.625rem;
+          .icon {
+            @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background: $white;
+            &.arrow {
+              @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+              left: 0.625rem;
+              width: 1.125rem;
+              height: 0.125rem;
+              background: none;
+              &::before {
+                position: absolute;
+                content: "";
+                top: -0.25rem;
+                right: 0.0625rem;
+                width: 0.625rem;
+                height: 0.625rem;
+                border-top: 0.125rem solid #fff;
+                border-right: 0.125rem solid #fff;
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+        .button-text {
+          @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+          position: absolute;
+          color: $light-purple;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          padding: 0.75rem 0;
+          margin: 0 0 0 1.85rem;
+          font-weight: 600;
+          line-height: 1.6;
+          text-align: center;
+          text-transform: capitalize;
+        }
+      }
+      &:hover {
+        .circle {
+          width: 100%;
+          .icon {
+            &.arrow {
+              background: $white;
+              transform: translate(1rem, 0);
+            }
+          }
+        }
+        .button-text {
+          color: $white;
+        }
+      }
+    }
+    // hide for tablet & mobile
+    @include tablet {
+      display: none;
+    }
+  }
+  &__toggle {
+    visibility: hidden;
+    // show for tablet & mobile
+    @include tablet {
+      visibility: visible;
+    }
+
+    > span {
+      display: block;
+      height: 2px;
+      width: 30px;
+      background-color: $dark-color;
+      transition: all 0.3s ease-in-out;
+      transform-origin: 5px 1px;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

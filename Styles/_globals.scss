@@ -1,0 +1,275 @@
+//=============Body Styles===============//
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-family: "Radio Canada", sans-serif;
+  font-family: "Urbanist", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  font-size: $Medium;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0px;
+  color: $dark-color;
+}
+//=================//
+
+//Overflow
+.overflow-hidden {
+  overflow: hidden;
+}
+//Decorations
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+//=============Button Styles===============//
+
+//Button with gradient slide hover
+.button {
+  position: relative;
+  display: inline-block;
+  overflow: if($debug, unset, hidden);
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  padding: 0.75em 2.5em;
+  border: if($debug, 0.15em solid $dark-orange, none);
+  border-radius: calc(0.15em + 0.15em + 0.15em);
+  background: if($debug, none, $dark-orange);
+  color: $white;
+  transition: transform 2s ease-in-out;
+  //create a pseudo-element of this button
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg, $dark-yellow 0%, $yellow 74%);
+    transition: all 1s;
+    transform: translateX(-100%);
+    z-index: -1;
+  }
+  //animate this pseudo-element so that it returns to its original position
+  &:hover,
+  &:focus {
+    color: #fff;
+    transition: all 1s;
+    z-index: 1;
+    cursor: pointer;
+    transform: translateX(0%);
+    &:before {
+      transform: translateX(0%);
+    }
+  }
+}
+@mixin transition(
+  $property: all,
+  $duration: 0.45s,
+  $ease: cubic-bezier(0.65, 0, 0.076, 1)
+) {
+  transition: $property $duration $ease;
+}
+
+* {
+  box-sizing: border-box;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+//Button with animated arrow
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  &.learn-more {
+    width: 12rem;
+    height: auto;
+    .circle {
+      @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+      position: relative;
+      display: block;
+      margin: 0;
+      width: 3rem;
+      height: 3rem;
+      background: $gradient;
+      border-radius: 1.625rem;
+      .icon {
+        @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: $white;
+        &.arrow {
+          @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+          left: 0.625rem;
+          width: 1.125rem;
+          height: 0.125rem;
+          background: none;
+          &::before {
+            position: absolute;
+            content: "";
+            top: -0.25rem;
+            right: 0.0625rem;
+            width: 0.625rem;
+            height: 0.625rem;
+            border-top: 0.125rem solid #fff;
+            border-right: 0.125rem solid #fff;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+    .button-text {
+      @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+      position: absolute;
+      color: $light-purple;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0.75rem 0;
+      margin: 0 0 0 1.85rem;
+      font-weight: 600;
+      line-height: 1.6;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
+  &:hover {
+    .circle {
+      width: 100%;
+      .icon {
+        &.arrow {
+          background: $white;
+          transform: translate(1rem, 0);
+        }
+      }
+    }
+    .button-text {
+      color: $white;
+    }
+  }
+}
+//======================//
+
+//Flex Box
+.flex {
+  display: flex;
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-jc-c {
+    justify-content: center;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+}
+//spacing
+.container {
+  padding-left: 200px;
+  padding-right: 200px;
+}
+//Heading Sections
+.heading {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 700px;
+
+  h2 {
+    font-size: $xlarg;
+    color: $dark-color;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 5px;
+      background: $dark-color;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      margin-top: 20px;
+    }
+    @include mobile {
+      font-size: 40px;
+    }
+  }
+  p {
+    font-weight: 400;
+    color: $light-purple;
+  }
+}
+
+// hide for tablet & mobile
+@include tablet {
+  display: none;
+}
+//Animated Mouse
+.mouse {
+  width: 40px;
+  height: 60px;
+  border: 3px solid $dark-color;
+  border-radius: 60px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  @include tablet {
+    display: none;
+  }
+  &::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $dark-color;
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 2s infinite;
+    -webkit-animation: wheel 2s infinite;
+  }
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 40px;
+  }
+}
+
+@-webkit-keyframes wheel {
+  to {
+    opacity: 0;
+    top: 60px;
+  }
+}

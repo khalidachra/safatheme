@@ -1,0 +1,119 @@
+.hero {
+  //Fixed Header Position
+  height: 100vh;
+  //Small Sceen view
+
+  @include desktop {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include tablet {
+    margin-top: 100px;
+    display: block;
+    justify-content: center;
+    text-align: center;
+  }
+  @include mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  ////Hero Section
+  &__image {
+    order: 2;
+    img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 100%;
+      //For Tablet & Mobile
+      @include tablet {
+        width: 80%;
+      }
+    }
+  }
+  &__text {
+    //For Mobile
+    @include mobile {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: $xlarg;
+      color: $dark-color;
+      margin-bottom: 24px;
+      //For tablet
+      @include tablet {
+        font-size: 50px;
+      }
+    }
+    p {
+      font-size: $larg;
+      color: $light-purple;
+      margin-bottom: 36px;
+    }
+    .mark {
+      display: flex;
+      align-items: center;
+      //For Tablet & Mobile
+      @include tablet {
+        justify-content: center;
+      }
+
+      > a {
+        color: $dark-color;
+        font-size: 25px;
+        margin-bottom: 30px;
+        &:not(:first-child) {
+          margin-left: 20px;
+        }
+      }
+      //Arrow Animation//
+      .bounce {
+        animation-name: bounce;
+        animation-timing-function: ease;
+      }
+      .arrow {
+        z-index: -1;
+        align-self: flex-end;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        transform-origin: bottom;
+        img {
+          width: 40px;
+        }
+      }
+      @keyframes bounce {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(50px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+    }
+    //>
+
+    .social-media {
+      margin-top: 40px;
+      display: flex;
+      > a {
+        &:not(:first-child) {
+          margin-left: 30px;
+        }
+      }
+      i {
+        color: $light-purple;
+        padding: 5px;
+        border-radius: 50px;
+        font-size: 25px;
+      }
+      //For Tablet
+      @include tablet {
+        justify-content: center;
+      }
+    }
+  }
+}

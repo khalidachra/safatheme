@@ -1,0 +1,92 @@
+.features {
+  background-color: $dark-orange;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  //For /Desktop/Tablet/Mobile
+  @include desktop {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include tablet {
+    margin-top: 200px;
+  }
+  //>
+  //Heading & Titles
+  &__heading {
+    h2 {
+      color: $light-color;
+      padding: 20px 0;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 150px;
+        height: 5px;
+        background: $light-color;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin-top: 20px;
+      }
+    }
+    p {
+      color: $light-color;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      opacity: 0.5;
+    }
+  }
+  //>
+  //Features Grid
+
+  &__grid {
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 2rem;
+  }
+  &__item {
+    text-align: center;
+    padding: 30px 20px;
+    background: $light-color;
+    margin: 0 auto;
+    max-width: 400px;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: all 300ms ease;
+    &:hover {
+      transform: translateY(-10px);
+      border-bottom: 5px solid $yellow;
+    }
+  }
+  &__main-item {
+    transform: scale(1.1);
+    border-bottom: 5px solid $yellow;
+    &:hover {
+      transform: scale(1.14);
+    }
+  }
+  &__arrow {
+    font-size: 25px;
+    color: $light-purple;
+  }
+  &__icon {
+    font-size: $xlarg;
+    color: $yellow;
+  }
+  &__title {
+    font-size: $larg;
+    font-weight: 500;
+    margin-top: 20px;
+  }
+  &__description {
+    font-size: 16px;
+    color: $light-purple;
+    margin-top: 20px;
+    line-height: 1.8;
+    font-weight: 400;
+  }
+  //>
+}

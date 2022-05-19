@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Styles/styles.css" />
+    <!--Font Links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Radio+Canada:wght@300;500;700&family=Urbanist:ital,wght@0,100;0,300;0,400;0,600;0,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Icons Links-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link href="https://css.gg/arrows-merge-alt-h.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <!--AOS Link-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!--===========Home Section===========-->
+    <!--Header-->
+    <section id="home" class="home">
+      <div class="bg-home"></div>
+      <header class="header">
+        <div class="overlay faded"></div>
+        <nav
+          id="navBar"
+          class="container flex flex-jc-sb flex-ai-c header__navbar"
+        >
+          <a href="" class="header__logo">
+            <img src="./Images/logo.png" alt="" />
+          </a>
+          <a id="menuBtn" class="header__toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <ul class="header__nav-links">
+            <li href="#"><a href="#home">home</a></li>
+            <li href="#"><a href="#features">features</a></li>
+            <li href="#"><a href="#about">about</a></li>
+            <li href="#"><a>reviews</a></li>
+            <li href="#"><a>contact</a></li>
+            <button class="learn-more">
+              <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+              </span>
+              <span class="button-text">Learn More</span>
+            </button>
+          </ul>
+        </nav>
+        <div class="faded container header__menu">
+          <a href="#">home</a>
+          <a href="#">features</a>
+          <a href="#">about</a>
+          <a href="#">reviews</a>
+          <a href="#">contact</a>
+        </div>
+      </header>
+      <!--Hero Section-->
+      <section class="hero container flex flex-jc-sb flex-ai-c">
+        <div class="hero__image" data-aos="fade-left" data-aos-duration="2000">
+          <img src="./Images/hero-image.png" alt="" />
+        </div>
+        <div class="hero__text" data-aos="fade-right" data-aos-duration="2000">
+          <h1>
+            Digital Marketing <br />
+            Agency
+          </h1>
+          <p>
+            Start your digital business and let people know more <br />about
+            you.
+          </p>
+          <div class="mark">
+            <a href="">Creative Experts</a>
+            <a href="" class="arrow bounce"
+              ><img src="./Images/Arrow.png" alt=""
+            /></a>
+          </div>
+
+          <a href="" class="button">
+            <span>Contact Us</span>
+          </a>
+          <div class="social-media">
+            <a href=""> <img src="./Images/instagram-icon.svg" alt="" /> </a>
+            <a href=""> <img src="./Images/twitter-icon.svg" alt="" /> </a>
+            <a href=""> <img src="./Images/fb-icon.svg" alt="" /> </a>
+          </div>
+        </div>
+      </section>
+    </section>
+    <div class="mouse"></div>
+
+    <!--===========Home Section End===========-->
+
+    <!--===========Features Section Start===========-->
+    <section id="features" class="features container">
+      <div
+        class="features__heading heading"
+        data-aos="fade-down"
+        data-aos-duration="2000"
+      >
+        <h2>Why choose SAFA template?</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis,
+          eligendi. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Consectetur, omnis!
+        </p>
+        <div class="icons">
+          <img src="./Images/icon-html-5.svg" alt="" />
+          <img src="./Images/icon-css3.svg" alt="" />
+          <img src="./Images/icon-javascript.svg" alt="" />
+        </div>
+      </div>
+
+      <div class="features__grid" data-aos="fade-up" data-aos-duration="2000">
+        <div class="features__item">
+          <div class="features__icon">
+            <i class="fa-solid fa-paper-plane"></i>
+          </div>
+          <div class="features__title">Fast And Flexible</div>
+          <div class="features__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            asperiores necessitatibus rerum laudantium, delectus excepturi?
+          </div>
+        </div>
+        <div class="features__item features__main-item">
+          <div class="features__icon">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <div class="features__title">Responsive Website</div>
+          <div class="features__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+            molestiae earum, tempore amet vitae laboriosam.
+          </div>
+        </div>
+        <div class="features__item">
+          <div class="features__icon">
+            <i class="fa-solid fa-life-ring"></i>
+          </div>
+          <div class="features__title">Active Support</div>
+          <div class="features__description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi,
+            sequi adipisci perferendis vel perspiciatis illum?
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--===========Features Section End===========-->
+
+    <!--===========About Section Start===========-->
+    <!--First Content-->
+    <div
+      class="about__heading heading"
+      data-aos="fade-down"
+      data-aos-duration="2000"
+    >
+      <h2>Few Words About Our Company</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis,
+        eligendi. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Consectetur, omnis!
+      </p>
+      <i class="fa-solid fa-lightbulb"></i>
+    </div>
+    <div class="about__section">
+      <div
+        class="image"
+        class="features__item"
+        data-aos="fade-down"
+        data-aos-duration="2000"
+      >
+        <img src="./Images/phone.png" alt="" />
+      </div>
+      <div
+        class="wrapper"
+        class="features__item"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
+        <div class=".title">
+          <h2>SAFA is the best Digitla Marketing Agency</h2>
+        </div>
+        <div class="content">
+          <div class="icon">
+            <img src="./Images/laptop-light.svg" alt="" />
+          </div>
+          <div class="info">
+            <div class="titles">Our Mission</div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+              ullam. Incidunt provident aliquid hic eos.
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <div class="icon"><img src="./Images/cil-badge.svg" alt="" /></div>
+          <div class="info">
+            <div class="title">Work History</div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+              ullam. Incidunt provident aliquid hic eos.
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <div class="icon">
+            <img src="./Images/pie-chart-line.svg" alt="" />
+          </div>
+          <div class="info">
+            <div class="title">Our Services</div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+              ullam. Incidunt provident aliquid hic eos.
+            </p>
+          </div>
+        </div>
+        <div class="bottom-button">
+          <button class="learn-more">
+            <span class="circle" aria-hidden="true">
+              <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">Learn More</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--Partners-->
+    <div class="partners">
+      <div class="partners__heading heading">
+        <div class="">Trusted By</div>
+      </div>
+      <div class="partners__grid">
+        <div class="partners__item">
+          <div class="partners__icon">
+            <i class="uil uil-amazon"></i>
+          </div>
+        </div>
+        <div class="partners__item">
+          <div class="partners__icon">
+            <i class="uil uil-behance"></i>
+          </div>
+        </div>
+        <div class="partners__item">
+          <div class="partners__icon">
+            <i class="fa-solid fa-paper-plane"></i>
+          </div>
+        </div>
+        <div class="partners__item">
+          <div class="partners__icon">
+            <i class="uil uil-adobe"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--===========About Section End===========-->
+    <!--===========Reviews Section Start===========-->
+    <section class="reviews">
+      <main>
+        <div
+          class="about__heading heading"
+          data-aos="fade-down"
+          data-aos-duration="2000"
+        >
+          <h2>What people say about us</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis,
+            eligendi. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Consectetur, omnis!
+          </p>
+        </div>
+
+        <div class="slider" data-aos="fade-down" data-aos-duration="2000">
+          <div class="switch-btn">
+            <div class="previous"></div>
+            <div class="next"></div>
+          </div>
+
+          <div class="slide">
+            <div class="testimonial">
+              <blockquote>
+                “ I’ve been interested in coding for a while but never taken the
+                jump, until now. I couldn’t recommend this course enough. I’m
+                now in the job of my dreams and so excited about the future. ”
+              </blockquote>
+              <p class="author">
+                Tanya Sinclair
+                <span>UX Engineer</span>
+              </p>
+            </div>
+
+            <div class="slider-img">
+              <img
+                src="https://alcs-slider.netlify.app/images/image-tanya.jpg"
+                alt="Author Image"
+              />
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="testimonial">
+              <blockquote>
+                “ If you want to lay the best foundation possible I’d recommend
+                taking this course. The depth the instructors go into is
+                incredible. I now feel so confident about starting up as a
+                professional developer. ”
+              </blockquote>
+              <p class="author">
+                John Tarkpor
+                <span>Junior Front-end Developer</span>
+              </p>
+            </div>
+
+            <div class="slider-img">
+              <img
+                src="https://alcs-slider.netlify.app/images/image-john.jpg"
+                alt="Author Image"
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <!--===========Reviews Section End===========-->
+    <!--===========Contact Section Start===========-->
+    <div class="contact-section">
+      <div
+        class="about__heading heading"
+        data-aos="fade-down"
+        data-aos-duration="2000"
+      >
+        <h2>Contact Our Team</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis,
+          eligendi. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Consectetur, omnis!
+        </p>
+      </div>
+      <div class="background" data-aos="fade-up" data-aos-duration="2000">
+        <div class="contact-content">
+          <div class="screen">
+            <div class="screen-header">
+              <div class="screen-header-left">
+                <div class="screen-header-button close"></div>
+                <div class="screen-header-button maximize"></div>
+                <div class="screen-header-button minimize"></div>
+              </div>
+              <div class="screen-header-right">
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+              </div>
+            </div>
+            <div class="screen-body">
+              <div class="screen-body-item left">
+                <div class="app-title">
+                  <span>CONTACT</span>
+                  <span>US</span>
+                </div>
+                <div class="app-contact">CONTACT INFO : +00 00 00 00 00</div>
+              </div>
+              <div class="screen-body-item">
+                <div class="app-form">
+                  <div class="app-form-group">
+                    <input
+                      class="app-form-control"
+                      placeholder="NAME"
+                      value="Model Graphic"
+                    />
+                  </div>
+                  <div class="app-form-group">
+                    <input class="app-form-control" placeholder="EMAIL" />
+                  </div>
+                  <div class="app-form-group">
+                    <input class="app-form-control" placeholder="CONTACT NO" />
+                  </div>
+                  <div class="app-form-group message">
+                    <input class="app-form-control" placeholder="MESSAGE" />
+                  </div>
+                  <div class="app-form-group buttons">
+                    <button class="app-form-button">CANCEL</button>
+                    <button class="app-form-button">SEND</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--===========Contact Section End===========-->
+    <!--===========Footer Section Start===========-->
+    <div class="pg-footer">
+      <footer class="footer">
+        <svg
+          class="footer-wave-svg"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 100"
+          preserveAspectRatio="none"
+        >
+          <path
+            class="footer-wave-path"
+            d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"
+          ></path>
+        </svg>
+        <div class="footer-content">
+          <div class="footer-content-column">
+            <div class="footer-logo">
+              <a class="footer-logo-link" href="#">
+                <span class="hidden-link-text">LOGO</span>
+                <h1>LOGO</h1>
+              </a>
+            </div>
+            <div class="footer-menu">
+              <h2 class="footer-menu-name">Get Started</h2>
+              <ul id="menu-get-started" class="footer-menu-list">
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-product"
+                >
+                  <a href="#">Start</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-product"
+                >
+                  <a href="#">Documentation</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-product"
+                >
+                  <a href="#">Installation</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-content-column">
+            <div class="footer-menu">
+              <h2 class="footer-menu-name">Company</h2>
+              <ul id="menu-company" class="footer-menu-list">
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-page"
+                >
+                  <a href="#">Contact</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-taxonomy menu-item-object-category"
+                >
+                  <a href="#">News</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-page"
+                >
+                  <a href="#">Careers</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-menu">
+              <h2 class="footer-menu-name">Legal</h2>
+              <ul id="menu-legal" class="footer-menu-list">
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-170434"
+                >
+                  <a href="#">Privacy Notice</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-page"
+                >
+                  <a href="#">Terms of Use</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-content-column">
+            <div class="footer-menu">
+              <h2 class="footer-menu-name">Quick Links</h2>
+              <ul id="menu-quick-links" class="footer-menu-list">
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom"
+                >
+                  <a target="_blank" rel="noopener noreferrer" href="#"
+                    >Support Center</a
+                  >
+                </li>
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom"
+                >
+                  <a target="_blank" rel="noopener noreferrer" href="#"
+                    >Service Status</a
+                  >
+                </li>
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-page"
+                >
+                  <a href="#">Security</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-page"
+                >
+                  <a href="#">Blog</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-post_type_archive menu-item-object-customer"
+                >
+                  <a href="#">Customers</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-page"
+                >
+                  <a href="#">Reviews</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-content-column">
+            <div class="footer-call-to-action">
+              <h2 class="footer-call-to-action-title">Let's Chat</h2>
+              <p class="footer-call-to-action-description">
+                Have a support question?
+              </p>
+              <a
+                class="footer-call-to-action-button button"
+                href="#"
+                target="_self"
+              >
+                Get in Touch
+              </a>
+            </div>
+            <div class="footer-call-to-action">
+              <h2 class="footer-call-to-action-title">You Call Us</h2>
+              <p class="footer-call-to-action-link-wrapper">
+                <a
+                  class="footer-call-to-action-link"
+                  href="tel:0124-64XXXX"
+                  target="_self"
+                >
+                  0124-64XXXX
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="footer-copyright-wrapper">
+            <p class="footer-copyright-text">
+              <a class="footer-copyright-link" href="#" target="_self">
+                ©2022 | Designed By: ModelGraphic | All rights reserved.
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!--===========Footer Section End===========-->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./Js Files/main.js"></script>
+    <script src="./Js Files/scroll_nav.js"></script>
+  </body>
+</html>
